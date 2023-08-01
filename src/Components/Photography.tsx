@@ -83,7 +83,7 @@ export default function Photography() {
     return (
         <div className='body-content px-lg-5'>
             <TopNav/>
-            <div className="row w3-animate-opacity">
+            <div className="row w3-animate-opacity mt-5 unselectable">
                     {renderColumns(galleryImages, galleryImagesSm)}
             </div>
         </div>

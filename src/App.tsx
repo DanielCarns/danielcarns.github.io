@@ -8,19 +8,12 @@ import Engineering from './Components/Engineering'
 
 function App() {
   return (
-    /*<div className="App">
-      <header className="App-header">
-      </header>
-      <body>
-
-      </body>
-    </div>*/
     <div className="App">
       <Routes>
-        <Route path='/About' element={ About() }/>
-        <Route path='/Engineering' element={ Engineering() }/>
-        <Route path='/Photography' element={ Photography() }/>
-        <Route path='/' element={ Home() }/>
+        <Route path='/About' element={ <About/> }/>
+        <Route path='/Engineering' element={ <Engineering/> }/>
+        <Route path='/Photography' element={ <Photography/> }/>
+        <Route path='/' element={ <Home/> }/>
       </Routes>
     </div>
   );
