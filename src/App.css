@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .App-logo {
@@ -22,6 +34,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #256D85;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+  color: #06283D;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .App-link {
@@ -76,6 +101,14 @@
   margin: 0;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .body-content {
@@ -134,4 +167,39 @@ ul.nav a:hover {
 
 .custom-dark-toggler .navbar-toggler-icon { 
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@font-face {
+  font-family: 'Mammoth';
+  src: url('./assets/mammoth/Mammoth.otf') format('opentype');
+}
+
+.mammoth-font-xxlarge {
+  font-family: 'Mammoth', sans-serif;
+  color: black;
+  font-size: xx-large;
+}
+
+
+.mammoth-font {
+  font-family: 'Mammoth', sans-serif;
+  color: black;
+  font-size: small;
+}
+
+.centered-font {
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center; /* Vertically center the items */
+  height: 100vh; /* Set the container's height (adjust as needed) */
+  flex-direction: column;
 }
