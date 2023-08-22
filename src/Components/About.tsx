@@ -8,7 +8,10 @@ export default function About() {
                     COMING SOON
                 </div>
                 <div className="">
-                    Currently working on a client site and my AWS Dev certification
+                    About Me
+                </div>
+                <div>
+
                 </div>
         </div>    
     )
