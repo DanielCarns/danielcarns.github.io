@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -26,6 +27,7 @@
 }
 
 html {
+  overscroll-behavior: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
@@ -67,7 +69,7 @@ html {
   }
 }
 
-.homepagebg {
+.home-content-bg {
   background-color: rgba(0, 0, 0, 0.4); 
 }
 
@@ -225,15 +227,26 @@ body, html {
 }
 
 .content {
-  counter-reset: section;
   display: flex;
-  flex: 1;
-  padding: 10px;
   justify-content: center;
+  flex: 1;
+  border-radius: 5px;
+  padding: 10px;
   align-items: center;
   height: 100vh;
   flex-direction: column;
   padding: 40px 0px 40px 0px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  height: 10rem;
+  width: 25%;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .title-font-light {
@@ -243,6 +256,7 @@ body, html {
   font-size: 500%;
   pointer-events: none;
   animation: fadeIn 1.5s ease-in;
+  scroll-behavior: smooth;
 }
 
 .subtitle-font-light {
@@ -402,10 +416,11 @@ body, html {
   height: 500px;
 }
 
+/*  background: url('https://dvo8qteke0tye.cloudfront.net/bg2.jpg') no-repeat 50% 50%; */
 .hero-background {
   width: 100%;
   height: calc(100vh);
-  background: url('https://dvo8qteke0tye.cloudfront.net/bg2.jpg') no-repeat 50% 50%;
+  background: url('./assets/bg-stars.jpg');
   background-size: cover;
   position: relative;
   transition: transform 0.3s;
@@ -431,8 +446,36 @@ body, html {
   animation: fadeIn 1.5s ease-in 1.45s forwards;
 }
 
-.about-section {
+.section-left {
+  height: 90vh;
+  width: 40vw;
   background-color: #282c34;
+  position: absolute;
+  left: 8vw;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.parallax-container {
+  counter-reset: section;
+  scroll-snap-type: y mandatory;
+  position: inherit;
+}
+
+.section-right {
+  height: 90vh;
+  width: 40vw;
+  background-color: #282c34;
+  position: absolute;
+  right: 8vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.parallax-section {
+  width: 100%;
+  height: 100vh;
 }
 
 h1 {
