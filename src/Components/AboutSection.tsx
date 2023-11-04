@@ -6,8 +6,7 @@ export default function AboutSection() {
     <div className="content px-5">
       <h2 className="numbered-heading">About Me</h2>
       <p className="summary">
-        Welcome! In the digital realm, I wear many hats - a mobile app
-        developer, a full-stack engineer, and a cloud technology enthusiast.
+        Welcome! In the digital realm, I wear many hats - a full-stack engineer, mobile developer, and a cloud practitioner.
         With 5+ years of hands-on experience, I'm dedicated to creating and delivering 
         quality software solutions. I've had the privilege of 
         working across various industries including healthcare, robotics, consulting, and fitness. 

@@ -1,13 +1,15 @@
-
 export default function HomeContent() {
-    return (
-        <>
-        <div className="home-info">
-        <h1 className="title-font-light d-none d-md-block">DANIEL CARNS</h1>
-        <div className="subtitle-font-light display-1 mx-4">
-          SOFTWARE ENGINEER, FULL STACK & MOBILE
+  return (
+    <>
+      <div className="intro-content-container">
+        <div className="circular-image">
+          <img className="portrait-image" />
         </div>
-        <div>
+
+        <h1 className="title-font-light d-md-block">SOFTWARE ENGINEER</h1>
+        <h2 className="title-font-light d-md-block">FULL STACK & MOBILE</h2>
+        <div className="subtitle-font-light display-1 mx-4">DANIEL CARNS</div>
+        <div className="social-link-container">
           <a
             rel="noopener"
             data-umami-event="github-social-hero"
@@ -54,7 +56,7 @@ export default function HomeContent() {
             </svg>
           </a>
         </div>
-        </div>
-        </>
-    );
+      </div>
+    </>
+  );
 }
