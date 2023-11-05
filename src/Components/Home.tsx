@@ -15,21 +15,21 @@ export default function Home() {
   }
 
   return (
-      <Parallax pages={5} className="parallax-container" style={{ top: '0', left: '0' }} ref={parallax}>
+      <Parallax pages={4} className="parallax-container" style={{ top: '0', left: '0' }} ref={parallax}>
        <ParallaxLayer
         offset={0}
         speed={0.05}
-        factor={5}
+        factor={4}
         style={{
           backgroundImage: `url(${starsSvg})`,
           backgroundSize: 'auto',
           backgroundRepeat: 'repeat',
           overscrollBehavior: 'none',
-          opacity: '80%'
+          opacity: '75%'
         }}
       >
         </ParallaxLayer>
-        <ParallaxLayer onClick={() => scroll(1)} speed={2} className="content">
+        <ParallaxLayer onClick={() => scroll(1)} sticky={{ start: 0, end: 0.25 }} speed={1} className="content">
           <IntroContent />
         </ParallaxLayer>
         <ParallaxLayer sticky={{ start: 1, end: 1.5 }} speed={0.25} offset={1} onClick={() => scroll(3)} className="parallax-section">

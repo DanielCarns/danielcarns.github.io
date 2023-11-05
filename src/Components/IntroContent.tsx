@@ -1,8 +1,6 @@
-import { useScroll, animated, useSpring } from "@react-spring/web";
-import React, { useEffect } from "react";
-import TypingText from "./TypingText";
+import { animated, useSpring } from "@react-spring/web";
 
-export default function HomeContent() {
+export default function IntroContent() {
   const textSpringUp = useSpring({
     from: { y: "100%" },
     to: { y: "0%" },

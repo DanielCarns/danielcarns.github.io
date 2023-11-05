@@ -136,20 +136,11 @@ body, html {
   justify-content: center;
   flex: 1;
   border-radius: 5px;
-  padding: 10px;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
   padding: 40px 0px 40px 0px;
-}
-
-.content-section {
-  background-color: rgba(195, 195, 195, 0.05);
-  border-radius: 5px;
-  width: 80%;
-  max-width: 1200px;
-  margin: auto;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card {
@@ -394,17 +385,18 @@ p {
 }
 
 @media (max-width: 768px) {
-  .content-section {
-    width: 90vw;
-  }
-
   .summary {
-    max-width: 80vw;
+    width: 85vw;
     font-size: 12px;
+    min-width: 200px !important;
   }
 
   .social-link-container {
     width: 80vw;
+  }
+
+  .content {
+    padding: 20px 0px 20px 0px;
   }
 }
 

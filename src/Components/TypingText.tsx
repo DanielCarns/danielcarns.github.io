@@ -24,7 +24,7 @@ const TypingText: React.FC<TypingTextProps> = ({
   });
 
   const cursorAnimation = useSpring({
-    from: { opacity: 1 },
+    from: { opacity: showCursor ? 1 : 0 },
     to: { opacity: 0 },
     loop: true,
     config: { duration: cursorBlinkRate },
@@ -44,7 +44,7 @@ const TypingText: React.FC<TypingTextProps> = ({
   }, [inView, text]);
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }} ref={ref}>
+    <div style={{ }} ref={ref}>
       <span>{displayedText}</span>
       <animated.span style={cursorAnimation}>_</animated.span>
     </div>
