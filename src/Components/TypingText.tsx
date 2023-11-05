@@ -23,12 +23,12 @@ const TypingText: React.FC<TypingTextProps> = ({
     triggerOnce: true,
   });
 
-  const cursorAnimation = showCursor ? useSpring({
+  const cursorAnimation = useSpring({
     from: { opacity: 1 },
     to: { opacity: 0 },
     loop: true,
     config: { duration: cursorBlinkRate },
-  }) : {};
+  });
 
   useEffect(() => {
     if (inView) {
