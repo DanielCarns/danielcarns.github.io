@@ -1,20 +1,66 @@
-export default function HomeContent() {
-  return (
-    <>
-      <div className="intro-content-container">
-        <div className="circular-image">
-          <img className="portrait-image" />
-        </div>
+import { useScroll, animated, useSpring } from "@react-spring/web";
+import React, { useEffect } from "react";
+import TypingText from "./TypingText";
 
-        <h1 className="title-font-light d-md-block">SOFTWARE ENGINEER</h1>
-        <h2 className="title-font-light d-md-block">FULL STACK & MOBILE</h2>
-        <div className="subtitle-font-light display-1 mx-4">DANIEL CARNS</div>
+export default function HomeContent() {
+  const textSpringUp = useSpring({
+    from: { y: "100%" },
+    to: { y: "0%" },
+    config: { duration: 800 },
+  });
+
+  const textSpringRightLeft = useSpring({
+    from: { x: "100%" },
+    to: { x: "0%" },
+    config: { duration: 800 },
+  });
+
+  const textSpringLeftRight = useSpring({
+    from: { x: "-100%" },
+    to: { x: "0%" },
+    config: { duration: 800 },
+  });
+
+  const fadeInWithDelay = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 750,
+    config: { duration: 1000 },
+  });
+
+  return (
+    <div>
+      <h3 className="name">
+          <span>
+            <animated.span style={textSpringUp}>HI, I'M DAN CARNS</animated.span>
+          </span>
+        </h3>
+        <animated.div className="circular-image" style={fadeInWithDelay}>
+          <img className="portrait-image" />
+        </animated.div>
+
+        <h1 className="title-font d-md-block">
+          <span>
+            <animated.span style={textSpringLeftRight}>
+              SOFTWARE ENGINEER
+            </animated.span>
+          </span>
+        </h1>
+        <h2 className="title-font subtitle-font d-md-block">
+          <span>
+            <animated.span style={textSpringRightLeft}>
+              FULL STACK  & MOBILE
+            </animated.span>
+          </span>
+        </h2>
+
         <div className="social-link-container">
+          <animated.div style={fadeInWithDelay}>
           <a
             rel="noopener"
             data-umami-event="github-social-hero"
             href="https://github.com/DanielCarns"
-            className="l1"
+            className=""
           >
             <svg className="social-link" role="img" viewBox="0 0 24 24">
               <title>GitHub</title>
@@ -25,7 +71,7 @@ export default function HomeContent() {
             rel="noopener"
             data-umami-event="strava-social-hero"
             href="https://www.strava.com/athletes/107364581"
-            className="l2"
+            className=""
           >
             <svg className="social-link" role="img" viewBox="0 0 24 24">
               <title>Strava</title>
@@ -36,7 +82,7 @@ export default function HomeContent() {
             rel="noopener"
             data-umami-event="mail-social-hero"
             href="mailto:carns.daniel1@gmail.com"
-            className="l3"
+            className=""
             title="carns.daniel1@gmail.com"
           >
             <svg className="social-link" role="img" viewBox="0 0 24 24">
@@ -47,7 +93,7 @@ export default function HomeContent() {
           <a
             rel="noopener"
             href="https://www.linkedin.com/in/daniel-carns-7b2b60a4/"
-            className="l4"
+            className=""
             title="LinkedIn"
           >
             <svg className="social-link" role="img" viewBox="0 0 24 24">
@@ -55,8 +101,8 @@ export default function HomeContent() {
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
           </a>
+          </animated.div>
         </div>
-      </div>
-    </>
+    </div>
   );
 }
